@@ -171,6 +171,14 @@
     }, 
     "changelog": [
         {
+            "ver": "2.0.2",
+            "text": [
+                "Rewrite of changelog command.",
+                "Added member data to the server database schema."
+            ],
+            "date": 1665693814
+        },
+        {
             "ver": "2.0.1",
             "text": [
                 "MongoDB connectivity added.",

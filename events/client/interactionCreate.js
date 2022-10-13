@@ -17,6 +17,11 @@ client.on('interactionCreate', async interaction => {
         const guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
         const lang = require(`../../data/locale/${guildcfg.lang}.json`);
 
+        let gmember = await guildcfgs.findOne({ 'members.id': interaction.member.id });
+        if (!gmember) {
+            gmember = await guildcfgs.updateOne({ gid: interaction.guild.id }, { members: [ ...guildcfg.members, { id: interaction.member.id, permPower: 0 }] });
+        }
+
         try {
             await command.execute(interaction, lang);
         }

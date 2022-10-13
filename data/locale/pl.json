@@ -170,6 +170,14 @@
     },
     "changelog": [
         {
+            "ver": "2.0.2",
+            "text": [
+                "Przepisanie komendy changelog.",
+                "Dodano dane użytkowników do schematu bazy danych serwera."
+            ],
+            "date": 1665693814
+        },
+        {
             "ver": "2.0.1",
             "text": [
                 "Dodano łączność z bazą danych MongoDB.",
