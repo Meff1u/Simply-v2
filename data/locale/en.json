@@ -1,0 +1,392 @@
+{
+    "commands": {
+        "help": {
+            "helpTitle": "List of all avaliable commands:",
+            "helpFieldInfo": "Info commands:",
+            "helpFieldMod": "Moderation commands:",
+            "helpFooter": "Use /help (command name) for more info!",
+            "commandNotExists": "This command does not exists!",
+            "infoCommandTitle": "Command:",
+            "infoUsageBar": "Usage:",
+            "infoUsage": [
+                "(command name)"
+            ],
+            "infoPermissionBar": "Permission Power:",
+            "infoPermissionBarDefault": "Default:",
+            "infoPermissionBarServer": "Server:",
+            "infoFooter": "() - optional | <> - required",
+            "infoDetailedDescBar": "Detailed Description:",
+            "infoDetailedDesc": "Displays all available commands sorted by category.\nUse `/help (command name)` to see details, permissions and other information."
+        },
+        "changelog": {
+            "title": "Latest changelogs:",
+            "footer": "Use /changelog (version) for more information!",
+            "infoTitle": "Changes for version",
+            "infoPreviousBar": "Previous version:",
+            "infoNextBar": "Next version:",
+            "versionNotExists": "That version does not exists!",
+            "infoDetailedDesc": "Displays the last 10 changes that were made to the bot.\n`/changelog (version) will let you see the details of the changes",
+            "infoUsage": [
+                "(version)"
+            ]
+        },
+        "bot": {
+            "title": "Informations about Simply",
+            "descID": "ID:",
+            "descAuthor": "Author:",
+            "descCreated": "Bot has been created:",
+            "fieldStatsName": "Statistics:",
+            "fieldStatsDescGuilds": "Guilds:",
+            "fieldStatsDescMembers": "Members:",
+            "fieldStatsDescCommands": "Commands:",
+            "fieldHostName": "Host:",
+            "fieldHostDescOS": "OS:",
+            "fieldHostDescRAM": "RAM Usage:",
+            "fieldHostDescCPU": "CPU Usage:",
+            "fieldHostDescRestart": "Last restart:",
+            "fieldHostDescPing": "Ping:",
+            "fieldVersionsName": "Versions:",
+            "infoUsage": [
+                ""
+            ],
+            "infoDeetailedDesc": "Displays detailed bot information such as statistics, host, versions, etc."
+        },
+        "settings": {
+            "permsNoData": "No data.",
+            "permsTitle": "Custom permissions power for:",
+            "permsFieldCommands": "Commands:",
+            "permsFieldRoles": "Roles:",
+            "permsFieldUsers": "Users:",
+            "verifyTitle": "Verification system settings for:",
+            "verifyFieldEmbed": "Embed:",
+            "verifyFieldEmbedTitle": "Title:",
+            "verifyFieldEmbedDesc": "Description",
+            "verifyFieldRoles": "Roles:",
+            "verifyFieldLocation": "Location:",
+            "verifyFieldMessage": "Message",
+            "verifyFooter": "Use /verify edit to change message location, text or add roles.",
+            "noVerify": "This server doesn't have a configured verification system!\nUse /verify create if you want one.",
+            "infoUsage": [
+                "permissions",
+                "language <language>",
+                "verify"
+            ],
+            "infoDetailedDesc": "This command is a summary of all server settings.\nLists the permissions and system verification settings.\nYou can also change the bot language with this command."
+        },
+        "perms": {
+            "powerValue": "Permissions power value should be **an integer**, **greater than 0** and **less than 100**.",
+            "title": "Permissions power has been changed!",
+            "descCommand": "Command:",
+            "descRole": "Role:",
+            "descUser": "User:",
+            "descPermPower": "Permission power:",
+            "footer": "Enter /settings permissions to see all permissions.",
+            "infoUsage": [
+                "commands <command name> <value>",
+                "roles <role> <value>",
+                "users <user> <value>"
+            ],
+            "infoDetailedDesc": "This command allows you to set the permissions power per command, role or user.\nEach configuration is server-based!\nThe minimum value of the permission power is **0** and the maximum is **100**\nUsers with the administrator permissions have a predetermined permissions power of 100, so you must have an administrator to configure commands for other users.\nHigher power = higher priority, i.e. a user with a power of 5 will not be able to use a command with a power of 10.\nAt the resultant power the greatest value is taken, i.e. a user with power 15 and role with power 10 will have a power of 15."
+        },
+        "verify": {
+            "noText": "The verification channel must be a **text channel**!",
+            "noPerms": "I don't have permissions to send messages on this channel! (`SEND MESSAGES`)",
+            "noHigher": "The verification role can't be higher than my role!",
+            "noBotRole": "The verification role can't be a bot role!",
+            "title": "Verification for",
+            "desc": "To have access to the rest of the server you need to verify yourself!\nWhen you are ready, click the **Start!** button.",
+            "button": "Start!",
+            "created": "Verification system has been created!",
+            "noVerify": "This server doesn't have a configured verification system!\nUse /verify create if you want one.",
+            "editSelectPlaceholder": "Nothing selected.",
+            "editSelectEmbedLabel": "Editing embed text",
+            "editSelectEmbedDesc": "Select if you want to edit the title, description and button of an embed.",
+            "editSelectChannelLabel": "Editing verification channel",
+            "editSelectChannelDesc": "Select if you want to edit the verification channel.",
+            "editSelectRolesLabel": "Adding roles",
+            "editSelectRolesDesc": "Select if you want to add verification roles.",
+            "editSelect": "What you want to do?",
+            "removeDesc": "This will completely remove the verification system on this server.\nAre you sure you want to do this?",
+            "removeButton": "Yes, I'm sure!",
+            "infoUsage": [
+                "create <channel> <role>",
+                "edit",
+                "remove"
+            ],
+            "infoDetailedDesc": "This command allows you to create a verification system based on performing a math operation, assigns role(s) after successful verification.\nYou can also edit the already created verification system (text, channel, roles) or completely remove it."
+        },
+        "timeout": {
+            "permPower": "The user you want to timeout must not have a permissions power greater than or equal to you!",
+            "mentionedPermPower": "permissions power:",
+            "yourPermPower": "Your permissions power:",
+            "wrongTime": "Wrong time entered! Follow the pattern:\n\n5d 20h\n20m\n14d 5m",
+            "error": "An unidentified error has occurred, please try again.",
+            "timedOut": "has been timed out for",
+            "infoUsage": [
+                "<user> <time> (reason)"
+            ],
+            "infoDetailedDesc": "This command allows you to prevent users from typing in a chat and talking on voice channels.\nEach such timeout is saved to the \"user punishments\" available under the /punishments command."
+        },
+        "punishments": {
+            "noPunishments": "There are no punishments for this user!",
+            "by": "by",
+            "all": "all punishments:",
+            "infoUsage": [
+                "<user> All",
+                "<user> Timeout"
+            ],
+            "infoDetailedDesc": "Displays all previous user punishments divided by categories (All, Timeout)."
+        }
+    },
+    "error": {
+        "permPowerTitle": "Sorry, but your permission power is too low to use this command!",
+        "permPowerRequired": "Required permission power:",
+        "permPowerYour": "Your permission power:",
+        "initError": "There was an error, please contact the developer with the error ID:",
+        "noReason": "No reason provided!"
+    },
+    "langChange": "Successfully changed language to English! 🇬🇧",
+    "verify": {
+        "modalTitle": "Verification for",
+        "modalPlaceholder": "Write result here.",
+        "answerCorrect": "Successfully verified!",
+        "answerWrong": "Wrong answer, try again!",
+        "editEmbedModalTitle": "Verification - Editing embed",
+        "editEmbedModalLabelTitle": "New embed title:",
+        "editEmbedModalLabelDesc": "New embed description:",
+        "editEmbedModalLabelButton": "New embed button text:",
+        "editEmbedSuccess": "Embed has been successfully edited!",
+        "editChannelModalTitle": "Verification - Editing channel",
+        "editChannelModalLabelChannel": "New verification channel ID:",
+        "editChannelModalPlaceholder": "Just paste channel ID here.",
+        "editRolesModalTitle": "Verification - Adding roles",
+        "editRolesModalLabelRoles": "Just roles ID separated by semicolon (;)",
+        "alreadyVerify": "This channel is already a verification channel!",
+        "successChanged": "The verification channel has been successfully changed!",
+        "remove": "The verification system has been successfully removed!",
+        "alreadyAdded": "This role is already added to the verification system!",
+        "roleAdded": "has been added to verification system!",
+        "noSuchRole": "There is no such role!",
+        "roleAddition": "The role addition is complete:"
+    }, 
+    "changelog": [
+        {
+            "ver": "2.0.1",
+            "text": [
+                "MongoDB connectivity added.",
+                "Command update (ping).",
+                "Added old bot language files.",
+                "Events update (ready, interactionCreate).",
+                "Creation of mongoDB events (connected, connecting, disconeccted, err).",
+                "Event handler update."
+            ],
+            "date": 1665682234
+        },
+        {
+            "ver": "2.0.0",
+            "text": [
+                "Complete bot reconstruction.",
+                "Upgrade to discord.js v14.",
+                "First initialization files and modules.",
+                "Creation of new handlers (commands/events)",
+                "Creation of events (ready, interactionCreate)",
+                "Creation of command (ping)"
+            ],
+            "date": 1665675600
+        },
+        {
+            "ver": "1.0.10",
+            "text": [
+                "Minor updates for all commands.",
+                "Creation of a timeout command that allows preventing users from writing and talking (incomplete).",
+                "Creation of a punishments command that allows you to see all users punishments by category (incomplete).",
+                "Update for initialization file.",
+                "A fix for configuration file.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651576947
+        },
+        {
+            "ver": "1.0.9f",
+            "text": [
+                "Update for verify command, now you can add roles for your verification system.",
+                "A small fix for the settings command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651400485
+        },
+        {
+            "ver": "1.0.9e",
+            "text": [
+                "A fix for the settings command.",
+                "Fixed the possibility of creating a verification system when one already exists.",
+                "Fixed the server icon not showing up when editing the embed text in the verification system."
+            ],
+            "date": 1651308878
+        },
+        {
+            "ver": "1.0.9d",
+            "text": [
+                "Updates for initialization file.",
+                "Update for verify command, now you can edit channel for your verification system.",
+                "A Fix for the verify command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651179039
+        },
+        {
+            "ver": "1.0.9c",
+            "text": [
+                "Updates for initialization file.",
+                "Update for verify command, now you can edit your (already configured) verification system.",
+                "Minor update for verification system creating function.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651165228
+        },
+        {
+            "ver": "1.0.9b",
+            "text": [
+                "A fix for the verification submit."
+            ],
+            "date": 1651090591
+        },
+        {
+            "ver": "1.0.9a",
+            "text": [
+                "Minor updates for initialization file.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651088300
+        },
+        {
+            "ver": "1.0.9",
+            "text": [
+                "New verification system (incomplete) based on performing a math operation (/verify create).",
+                "Update for settings command, possibility to see new verification system settings.",
+                "Minor updates for initialization file."
+            ],
+            "date": 1651085154
+        },
+        {
+            "ver": "1.0.8a",
+            "text": [
+                "Update for settings command, possibility to change the language with the /settings language.",
+                "Command initialization update.",
+                "Configuration files update.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1651003277
+        },
+        {
+            "ver": "1.0.8",
+            "text": [
+                "Creation of perms command that allows to edit the permissions power for commands, roles and users.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1650991120
+        },
+        {
+            "ver": "1.0.7c",
+            "text": [
+                "Configuration files update.",
+                "Minor updates for all commands."
+            ],
+            "date": 1650921692
+        },
+        {
+            "ver": "1.0.7b",
+            "text": [
+                "A fix for the bot command.",
+                "Error log update."
+            ],
+            "date": 1650909922
+        },
+        {
+            "ver": "1.0.7a",
+            "text": [
+                "Error log update.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1650908830
+        },
+        {
+            "ver": "1.0.7",
+            "text": [
+                "Creation of a settings command that displays specific server settings.  ",
+                "Command initialization update.",
+                "Minor update for a help command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1650907946
+        },
+        {
+            "ver": "1.0.6",
+            "text": [
+                "Configuration files update.",
+                "Command initialization update.",
+                "Creation of a function of checking the permission power for each command.",
+                "Update for the help command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1650901272
+        },
+        {
+            "ver": "1.0.5",
+            "text": [
+                "Creation of a bot command containing information about the bot.",
+                "Language update (Polish and English).",
+                "Minor update for the changelog command."
+            ],
+            "date": 1650895804
+        },
+        {
+            "ver": "1.0.4",
+            "text": [
+                "Language update (Polish and English).",
+                "A small fix for the help command."
+            ],
+            "date": 1650826984
+        },
+        {
+            "ver": "1.0.3a",
+            "text": [
+                "Minor update for the help command."
+            ],
+            "date": 1650825313
+        },
+        {
+            "ver": "1.0.3",
+            "text": [
+                "Creation of changelog command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1650822960
+        },
+        {
+            "ver": "1.0.2",
+            "text": [
+                "The function of creating server configuration files when added to server.",
+                "Adding the option to change the language (Polish and English)."
+            ],
+            "date": 1650816000
+        },
+        {
+            "ver": "1.0.1",
+            "text": [
+                "Creation of help command.",
+                "Minor improvements."
+            ],
+            "date": 1650672000
+        },
+        {
+            "ver": "1.0.0",
+            "text": [
+                "Idea to rewrite Simply, amateurly written bot from 2019.",
+                "Creation of initialization and configuration files.",
+                "First bot functions like status and command handler."
+            ],
+            "date": 1650585600
+        }
+    ]
+}

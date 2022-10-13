@@ -1,0 +1,391 @@
+{
+    "commands": {
+        "help": {
+            "helpTitle": "Lista dostępnych komend:",
+            "helpFieldInfo": "Komendy informacyjne:",
+            "helpFieldMod": "Komendy moderacyjne:",
+            "helpFooter": "Użyj /help (nazwa komendy) po więcej informacji!",
+            "commandNotExists": "Taka komenda nie istnieje!",
+            "infoCommandTitle": "Komenda:",
+            "infoUsageBar": "Użycie:",
+            "infoUsage": [
+                "(nazwa komendy)"
+            ],
+            "infoPermissionBar": "Moc permisji:",
+            "infoPermissionBarDefault": "Domyślna:",
+            "infoPermissionBarServer": "Serwerowa:",
+            "infoFooter": "() - opcjonalne | <> - wymagane",
+            "infoDetailedDescBar": "Szczegółowy opis:",
+            "infoDetailedDesc": "Wyświetla wszystkie dostępne komendy posortowane przez kategorie.\nUżyj `/help (nazwa komendy)`, aby zobaczyć szczegóły, permisje i inne informacje."
+        },
+        "changelog": {
+            "title": "Ostatnie zmiany:",
+            "footer": "Użyj /changelog (wersja) po więcej informacji!",
+            "infoTitle": "Zmiany dla wersji",
+            "infoPreviousBar": "Poprzednia wersja:",
+            "infoNextBar": "Następna wersja:",
+            "versionNotExists": "Taka wersja nie istnieje!",
+            "infoDetailedDesc": "Wyświetla ostatnie 10 zmian, które nastąpiły w bocie.\n`/changelog (wersja)` pozwoli zobaczyć szczegóły zmian.",
+            "infoUsage": [
+                "(wersja)"
+            ]
+        },
+        "bot": {
+            "title": "Informacje o Simply",
+            "descID": "ID:",
+            "descAuthor": "Autor:",
+            "descCreated": "Bot został utworzony:",
+            "fieldStatsName": "Statystyki:",
+            "fieldStatsDescGuilds": "Serwery:",
+            "fieldStatsDescMembers": "Użytkownicy:",
+            "fieldStatsDescCommands": "Komendy:",
+            "fieldHostName": "Host:",
+            "fieldHostDescOS": "OS:",
+            "fieldHostDescRAM": "Zużycie RAM'u:",
+            "fieldHostDescCPU": "Zużycie CPU:",
+            "fieldHostDescRestart": "Ostatni restart:",
+            "fieldHostDescPing": "Ping:",
+            "fieldVersionsName": "Wersje:",
+            "infoUsage": [
+                ""
+            ],
+            "infoDetailedDesc": "Wyświetla szczegółowe informacje o bocie takie jak statystyki, host, wersje, itp."
+        },
+        "settings": {
+            "permsNoData": "Brak danych.",
+            "permsTitle": "Własna moc permisji dla:",
+            "permsFieldCommands": "Komendy:",
+            "permsFieldRoles": "Role:",
+            "permsFieldUsers": "Użytkownicy:",
+            "verifyTitle": "Konfiguracja systemu weryfikacji dla:",
+            "verifyFieldEmbed": "Embed:",
+            "verifyFieldEmbedTitle": "Tytuł:",
+            "verifyFieldEmbedDesc": "Opis:",
+            "verifyFieldRoles": "Role:",
+            "verifyFieldLocation": "Lokacja:",
+            "verifyFieldMessage": "Wiadomość",
+            "verifyFooter": "Użyj /verify edit aby zmienić lokację wiadomości, tekst lub dodać role.",
+            "noVerify": "Ten serwer nie posiada skonfigurowanego systemu weryfikacji!\nUżyj /verify create jeśli chcesz taki stworzyć.",
+            "infoUsage": [
+                "permissions",
+                "language <język>",
+                "verify"
+            ],
+            "infoDetailedDesc": "Ta komenda jest zestawieniem wszystkich ustawień serwerowych.\nWyświetla listę permisji i konfigurację systemu weryfikacji.\nZa pomocą tej komendy można również zmienić język bota."
+        },
+        "perms": {
+            "powerValue": "Moc permisji powinna być **liczbą całkowitą większą od 0** i **mniejszą od 100**.",
+            "title": "Moc permisji została zmieniona!",
+            "descCommand": "Komenda:",
+            "descRole": "Rola:",
+            "descUser": "Użytkownik:",
+            "descPermPower": "Moc permisji:",
+            "footer": "Wpisz /settings permissions aby zobaczyć wszystkie permisje.",
+            "infoUsage": [
+                "commands <nazwa komendy> <wartość>",
+                "roles <rola> <wartość>",
+                "users <użytkownik> <wartość>"
+            ],
+            "infoDetailedDesc": "Ta komenda pozwala ustawić moc permisji na komendy, role i użytkowników.\nKażda konfiguracja jest serwerowa!\nMinimalna wartość mocy permisji to **0**, a maksymalna **100**\nUżytkownicy z permisją administratora posiadają odgórnie ustaloną moc permisji na 100, więc aby skonfigurować komendy pod innych użytkowników należy mieć administratora.\nWiększa moc = większy priorytet, czyli użytkownik o mocy 5 **nie będzie mógł** użyć komendy o mocy 10.\nPrzy mocy wypadkowej brana jest największa wartość, to znaczy, że użytkownik o mocy 15 z rolą o mocy 10 będzie miał moc 15."
+        },
+        "verify": {
+            "noText": "Kanał weryfikacji musi być **kanałem tekstowym**!",
+            "noPerms": "Nie mam permisji, aby wysyłać wiadomości na tym kanale! (`WYSYŁANIE WIADOMOŚCI`)",
+            "noHigher": "Rola weryfikacji nie może być wyżej niż moja rola!",
+            "noBotRole": "Rola weryfikacji nie może być rolą bota!",
+            "title": "Weryfikacja dla",
+            "desc": "Aby mieć dostęp do reszty serwera powinieneś się zweryfikować!\nJeśli będziesz gotowy, kliknij przycisk **Start!**",
+            "button": "Start!",
+            "created": "System weryfikacji został utworzony!",
+            "noVerify": "Ten serwer nie posiada skonfigurowanego systemu weryfikacji!\nUżyj /verify create jeśli chcesz taki stworzyć.",
+            "editSelectPlaceholder": "Nic nie wybrano.",
+            "editSelectEmbedLabel": "Edycja tekstu embeda",
+            "editSelectEmbedDesc": "Wybierz, jeśli chcesz zedytować tytuł, opis i przycisk embeda.",
+            "editSelectChannelLabel": "Edycja kanału weryfikacji",
+            "editSelectChannelDesc": "Wybierz, jeśli chcesz zedytować kanał weryfikacji.",
+            "editSelectRolesLabel": "Dodanie ról",
+            "editSelectRolesDesc": "Wyberz, jeśli chcesz dodać rolę weryfikacji.",
+            "editSelect": "Co chcesz zrobić?",
+            "removeDesc": "To całkowicie usunie system weryfikacji na tym serwerze.\nJesteś pewny, że chcesz to zrobić?",
+            "removeButton": "Tak, jestem pewny!",
+            "infoUsage": [
+                "create <kanał> <rola>",
+                "edit",
+                "remove"
+            ],
+            "infoDetailedDesc": "Ta komenda pozwala utworzyć system weryfikacji polegający na wykonaniu działania matematycznego, po udanej weryfikacji nadaje role.\nSłuży również do edycji utworzonego już systemu weryfikacji (tekst, kanał, role) lub do jego całkowitego usunięcia."
+        },
+        "timeout": {
+            "permPower": "Użytkownik, którego chcesz wysłać na przerwę nie może mieć od ciebie większej lub równej mocy permisji!",
+            "mentionedPermPower": "- moc permisji:",
+            "yourPermPower": "Twoja moc permisji:",
+            "wrongTime": "Wpisano zły czas! Zastosuj się do wzoru:\n\n5d 20h\n20m\n14d 5m",
+            "error": "Wystąpił niezidentyfikowany błąd, spróbuj ponownie.",
+            "timedOut": "został wysłany na przerwę na:",
+            "infoUsage": [
+                "<użytkownik> <czas> (powód)"
+            ],
+            "infoDetailedDesc": "Ta komenda pozwoli nieumożliwić użytkownikom pisanie na czacie i rozmawianie na kanałach głosowych.\nKażde takie \"wyciszenie\" jest zapisywane do \"kar użytkownika\" dostępnych pod komendom /punishments."
+        },
+        "punishments": {
+            "noPunishments": "Ten użytkownik nie ma żadnych kar!",
+            "by": "od",
+            "all": "- wszystkie kary:",
+            "infoUsage": [
+                "<użytkownik> All",
+                "<użytkownik> Timeout"
+            ],
+            "infoDetailedDesc": "Wyświetla wszystkie dotychczasowe kary użytkownika z podziałem na kategorie (All, Timeout)."
+        }
+    },
+    "error": {
+        "permPowerTitle": "Przykro mi, ale twoja moc permisji jest zbyt niska, by użyć tej komendy!",
+        "permPowerRequired": "Wymagana moc permisji:",
+        "permPowerYour": "Twoja moc permisji:",
+        "initError": "Wystąpił błąd, proszę skontaktować się z deweloperem podając ID błędu:",
+        "noReason": "Nie wprowadzono powodu!"
+    },
+    "langChange": "Pomyślnie zmieniono język na Polski! 🇵🇱",
+    "verify": {
+        "modalTitle": "Weryfikacja dla",
+        "modalPlaceholder": "Wpisz odpowiedź tutaj.",
+        "answerCorrect": "Pomyślnie zweryfikowano!",
+        "answerWrong": "Zła odpowiedź, spróbuj ponownie!",
+        "editEmbedModalTitle": "Weryfikacja - Edycja embeda",
+        "editEmbedModalLabelTitle": "Nowy tytuł embeda:",
+        "editEmbedModalLabelDesc": "Nowy opis embeda:",
+        "editEmbedModalLabelButton": "Nowy tekst przycisku embeda:",
+        "editEmbedSuccess": "Embed został pomyślnie zedytowany!",
+        "editChannelModalTitle": "Weryfikacja - Edycja kanału",
+        "editChannelModalLabelChannel": "ID nowego kanału weryfikacji:",
+        "editChannelModalPlaceholder": "Po prostu wklej tu ID kanału.",
+        "editRolesModalTitle": "Weryfikacja - Dodawanie ról",
+        "editRolesModalLabelRoles": "ID ról oddzielonych średnikiem (;)",
+        "alreadyVerify": "Ten kanał jest już kanałem weryfikacji!",
+        "successChanged": "Kanał weryfikacji został pomyślnie zmieniony!",
+        "remove": "System weryfikacji został pomyślnie usunięty!",
+        "roleAdded": "- dodano do systemu weryfikacji!",
+        "noSuchRole": "Taka rola nie istnieje!",
+        "roleAddition": "Dodawanie ról ukończone:"
+    },
+    "changelog": [
+        {
+            "ver": "2.0.1",
+            "text": [
+                "Dodano łączność z bazą danych MongoDB.",
+                "Aktualizacja komendy (ping).",
+                "Dodano pliki językowe ze starej wersji bota.",
+                "Aktualizacja eventów (ready, interactionCreate)",
+                "Utworzenie eventów mongoDB (connected, connecting, disconeccted, err).",
+                "Aktualizacja event handlera."
+            ],
+            "date": 1665682234
+        },
+        {
+            "ver": "2.0.0",
+            "text": [
+                "Całkowita przebudowa bota.",
+                "Przejście na wersję discord.js v14.",
+                "Pierwsze moduły i pliki inicjalizacyjne.",
+                "Utworzenie nowych handlerów (komendy/eventy)",
+                "Utworzenie eventów (ready, interactionCreate)",
+                "Utworzenie komendy (ping)"
+            ],
+            "date": 1665675600
+        },
+        {
+            "ver": "1.0.10",
+            "text": [
+                "Mała aktualizacja dla wszystkich komend.",
+                "Utworzenie komendy timeout, dzięki której można uniemożliwić użytkownikom pisanie i rozmawianie (niedokończone).",
+                "Utworzenie komendy punishments, pozwalającej zobaczyć wszystkie kary użytkownika z podziałem na kategorie (niedokończone).",
+                "Aktualizacje pliku inicjalizującego.",
+                "Fix pliku konfiguracyjnego.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651576947
+        },
+        {
+            "ver": "1.0.9f",
+            "text": [
+                "Aktualizacja komendy verify, od teraz można dodawać role do weryfikacji.",
+                "Mały fix komendy settings.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651400485
+        },
+        {
+            "ver": "1.0.9e",
+            "text": [
+                "Fix komendy settings.",
+                "Naprawiono możliwość utworzenia systemu weryfikacji kiedy taki już istnieje.",
+                "Naprawiono błąd niewyświetlającej się ikony serwera przy edycji tekstu embeda w systemie weryfikacji."
+            ],
+            "date": 1651308878
+        },
+        {
+            "ver": "1.0.9d",
+            "text": [
+                "Aktualizacje pliku inicjalizującego.",
+                "Aktualizacja komendy verify, od teraz można edytować kanał weryfikacji.",
+                "Fix komendy verify.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651179039
+        },
+        {
+            "ver": "1.0.9c",
+            "text": [
+                "Aktualizacje pliku inicjalizującego.",
+                "Aktualizacja komendy verify, od teraz można edytować (już skonfigurowany) system weryfikacji.",
+                "Mała aktualizacja funkcji tworzenia systemu weryfikacji.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651165228
+        },
+        {
+            "ver": "1.0.9b",
+            "text": [
+                "Fix wysyłania odpowiedzi podczas weryfikacji."
+            ],
+            "date": 1651090591
+        },
+        {
+            "ver": "1.0.9a",
+            "text": [
+                "Małe aktualizacje pliku inicjalizującego.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651088300
+        },
+        {
+            "ver": "1.0.9",
+            "text": [
+                "Nowy system weryfikacji (niedokończony) polegający na wykonaniu działania matematycznego (/verify create).",
+                "Aktualizacja komendy settings, możliwość sprawdzenia konfiguracji systemu weryfikacji.",
+                "Małe aktualizacje pliku inicjalizującego."
+            ],
+            "date": 1651085154
+        },
+        {
+            "ver": "1.0.8a",
+            "text": [
+                "Aktualizacja komendy settings, możliwość zmiany języka używając /settings language.",
+                "Aktualizacja inicjalizacji komend.",
+                "Aktualizacja plików konfiguracyjnych.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1651003277
+        },
+        {
+            "ver": "1.0.8",
+            "text": [
+                "Utworzenie komendy perms, która umożliwia edycję mocy permisji dla komend, ról i użytkowników.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1650991120
+        },
+        {
+            "ver": "1.0.7c",
+            "text": [
+                "Aktualizacja plików konfiguracyjnych.",
+                "Mała aktualizacja dla wszystkich komend."
+            ],
+            "date": 1650921692
+        },
+        {
+            "ver": "1.0.7b",
+            "text": [
+                "Fix komendy bot.",
+                "Aktualizacja logów błędów."
+            ],
+            "date": 1650909922
+        },
+        {
+            "ver": "1.0.7a",
+            "text": [
+                "Aktualizacja logów błędów.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1650908830
+        },
+        {
+            "ver": "1.0.7",
+            "text": [
+                "Utworzenie komendy settings, która wyświetla ustawienia konkretnego serwera.",
+                "Aktualizacja inicjalizacji komend.",
+                "Mała aktualizacja komendy help.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1650907946
+        },
+        {
+            "ver": "1.0.6",
+            "text": [
+                "Aktualizacja plików konfiguracyjnych.",
+                "Aktualizacja inicjalizacji komend.",
+                "Dodanie funkcji sprawdzania mocy permisji do każdej komendy.",
+                "Aktualizacja komendy help.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1650901272
+        },
+        {
+            "ver": "1.0.5",
+            "text": [
+                "Utworzenie komendy bot zawierającej informacje o bocie.",
+                "Aktualizacja językowa (Polski i Angielski).",
+                "Mała aktualizacja komendy changelog."
+            ],
+            "date": 1650895804
+        },
+        {
+            "ver": "1.0.4",
+            "text": [
+                "Aktualizacja językowa (Polski i Angielski).",
+                "Mały fix komendy help."
+            ],
+            "date": 1650826984
+        },
+        {
+            "ver": "1.0.3a",
+            "text": [
+                "Mała aktualizacja komendy help."
+            ],
+            "date": 1650825313
+        },
+        {
+            "ver": "1.0.3",
+            "text": [
+                "Utworzenie komendy changelog.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1650822960
+        },
+        {
+            "ver": "1.0.2",
+            "text": [
+                "Funkcja tworzenia serwerowych plików konfiguracyjnych podczas dołączania na serwer.",
+                "Dodanie opcji zmiany języka (Polski i Angielski)."
+            ],
+            "date": 1650816000
+        },
+        {
+            "ver": "1.0.1",
+            "text": [
+                "Utworzenie komendy help.",
+                "Małe udoskonalenia."
+            ],
+            "date": 1650672000
+        },
+        {
+            "ver": "1.0.0",
+            "text": [
+                "Pomysł na przepisanie Simply, amatorsko napisanego bota z 2019.",
+                "Utworzenie plików konfiguracyjnych i inicjalizacyjnych.",
+                "Pierwsze funkcje bota takie jak status i handler komend."
+            ],
+            "date": 1650585600
+        }
+    ]
+}

@@ -16,6 +16,11 @@ const fs = require('fs');
 const dotenv = require('dotenv');
 dotenv.config();
 
+const { connect } = require('mongoose');
+(async () => {
+    await connect(process.env.DB, {}).catch(console.error);
+})();
+
 client.commands = new Collection();
 
 module.exports = client;

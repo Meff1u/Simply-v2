@@ -1,7 +1,9 @@
 const { ActivityType } = require('discord.js');
-const client = require('..');
+const client = require('../..');
 const chalk = require('chalk');
-const pg = require('../package.json');
+const pg = require('../../package.json');
+const guildcfg = require('../../schemas/guildcfg');
+const mongoose = require('mongoose');
 
 client.on('ready', async () => {
     const activities = [
@@ -16,4 +18,19 @@ client.on('ready', async () => {
         i++;
     }, 10000);
     console.log(chalk.greenBright(`${client.user.tag} is watchin' ${client.guilds.cache.size} guilds!`));
+
+    client.guilds.cache.forEach(async (g) => {
+        let guild = await guildcfg.findOne({ gid: g.id });
+        if (!guild) {
+            console.log(`Creating config for ${g.name}...`);
+            guild = await new guildcfg({
+                _id: mongoose.Types.ObjectId(),
+                gid: g.id,
+                lang: 'en',
+            });
+
+            await guild.save().catch(console.error);
+            console.log('Done.');
+        }
+    });
 });
