@@ -4,9 +4,18 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('changelog')
         .setDescription('Information about changes.')
+        .setDescriptionLocalizations({
+            pl: 'Informacje o zmianach.',
+        })
         .addStringOption(option => option
             .setName('version')
+            .setNameLocalizations({
+                pl: 'wersja',
+            })
             .setDescription('Enter a specific version to get more information.')
+            .setDescriptionLocalizations({
+                pl: 'Wprowadź konkretną wersję, aby otrzymać więcej informacji.',
+            })
             .setRequired(false)),
     ephemeral: false,
     category: 'info',

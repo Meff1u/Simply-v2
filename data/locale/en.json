@@ -1,6 +1,7 @@
 {
     "commands": {
         "help": {
+            "id": "1030389826148630579",
             "helpTitle": "List of all avaliable commands:",
             "helpFieldInfo": "Info commands:",
             "helpFieldMod": "Moderation commands:",
@@ -16,19 +17,27 @@
             "infoPermissionBarServer": "Server:",
             "infoFooter": "() - optional | <> - required",
             "infoDetailedDescBar": "Detailed Description:",
-            "infoDetailedDesc": "Displays all available commands sorted by category.\nUse `/help (command name)` to see details, permissions and other information."
+            "infoDetailedDesc": "Displays all available commands sorted by category.\nUse </help:1030389826148630579> `(command name)` to see details, permissions and other information."
         },
         "changelog": {
+            "id": "1030215267961282570",
             "title": "Latest changelogs:",
             "footer": "Use /changelog (version) for more information!",
             "infoTitle": "Changes for version",
             "infoPreviousBar": "Previous version:",
             "infoNextBar": "Next version:",
             "versionNotExists": "That version does not exists!",
-            "infoDetailedDesc": "Displays the last 10 changes that were made to the bot.\n`/changelog (version) will let you see the details of the changes",
+            "infoDetailedDesc": "Displays the last 10 changes that were made to the bot.\n</changelog:1030215267961282570> `(version)` will let you see the details of the changes",
             "infoUsage": [
                 "(version)"
             ]
+        },
+        "ping": {
+            "id": "1030130574096093224",
+            "infoUsage": [
+                ""
+            ],
+            "infoDetailedDesc": "Returns bot latency in milliseconds."
         },
         "bot": {
             "title": "Informations about Simply",
@@ -170,6 +179,17 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.3",
+            "text": [
+                "Location based command names and descriptions added (changelog, help, ping).",
+                "Rewrite of help command.",
+                "Update of the interactionCreate event.",
+                "Added commands and roles data to the server database schema.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1665743185
+        },
         {
             "ver": "2.0.2",
             "text": [

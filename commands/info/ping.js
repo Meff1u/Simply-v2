@@ -3,7 +3,10 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('ping')
-        .setDescription('Returns my latency.'),
+        .setDescription('Returns my latency.')
+        .setDescriptionLocalizations({
+            pl: 'Zwraca moje opóźnienie.',
+        }),
     ephemeral: true,
     category: 'info',
     permPower: 0,

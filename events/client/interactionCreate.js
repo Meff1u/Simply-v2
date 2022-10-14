@@ -14,16 +14,15 @@ client.on('interactionCreate', async interaction => {
             await interaction.deferReply();
         }
 
-        const guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
+        let guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
         const lang = require(`../../data/locale/${guildcfg.lang}.json`);
 
-        let gmember = await guildcfgs.findOne({ 'members.id': interaction.member.id });
-        if (!gmember) {
-            gmember = await guildcfgs.updateOne({ gid: interaction.guild.id }, { members: [ ...guildcfg.members, { id: interaction.member.id, permPower: 0 }] });
+        if (!guildcfg.members || !guildcfg.members[interaction.member.id]) {
+            guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.members, [`members.${interaction.member.id}`]: { permPower: 0 } });
         }
 
         try {
-            await command.execute(interaction, lang);
+            await command.execute(interaction, lang, guildcfg);
         }
         catch (error) {
             console.error(error);

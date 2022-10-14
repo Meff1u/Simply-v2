@@ -1,6 +1,7 @@
 {
     "commands": {
         "help": {
+            "id": "1030389826148630579",
             "helpTitle": "Lista dostępnych komend:",
             "helpFieldInfo": "Komendy informacyjne:",
             "helpFieldMod": "Komendy moderacyjne:",
@@ -16,19 +17,27 @@
             "infoPermissionBarServer": "Serwerowa:",
             "infoFooter": "() - opcjonalne | <> - wymagane",
             "infoDetailedDescBar": "Szczegółowy opis:",
-            "infoDetailedDesc": "Wyświetla wszystkie dostępne komendy posortowane przez kategorie.\nUżyj `/help (nazwa komendy)`, aby zobaczyć szczegóły, permisje i inne informacje."
+            "infoDetailedDesc": "Wyświetla wszystkie dostępne komendy posortowane przez kategorie.\nUżyj </help:1030389826148630579> `(nazwa komendy)`, aby zobaczyć szczegóły, permisje i inne informacje."
         },
         "changelog": {
+            "id": "1030215267961282570",
             "title": "Ostatnie zmiany:",
             "footer": "Użyj /changelog (wersja) po więcej informacji!",
             "infoTitle": "Zmiany dla wersji",
             "infoPreviousBar": "Poprzednia wersja:",
             "infoNextBar": "Następna wersja:",
             "versionNotExists": "Taka wersja nie istnieje!",
-            "infoDetailedDesc": "Wyświetla ostatnie 10 zmian, które nastąpiły w bocie.\n`/changelog (wersja)` pozwoli zobaczyć szczegóły zmian.",
+            "infoDetailedDesc": "Wyświetla ostatnie 10 zmian, które nastąpiły w bocie.\n</changelog:1030215267961282570> (wersja)` pozwoli zobaczyć szczegóły zmian.",
             "infoUsage": [
                 "(wersja)"
             ]
+        },
+        "ping": {
+            "id": "1030130574096093224",
+            "infoUsage": [
+                ""
+            ],
+            "infoDetailedDesc": "Zwraca opóźnienie bota w milisekundach."
         },
         "bot": {
             "title": "Informacje o Simply",
@@ -169,6 +178,17 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.3",
+            "text": [
+                "Dodano nazwy i opisy komend bazujące na lokalizacji (changelog, help, ping).",
+                "Przepisanie komendy help.",
+                "Aktualizacja eventu interactionCreate.",
+                "Dodano dane komend i użytkowników do schematu bazy danych serwera.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1665743185
+        },
         {
             "ver": "2.0.2",
             "text": [
