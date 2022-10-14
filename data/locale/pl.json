@@ -179,6 +179,13 @@
     },
     "changelog": [
         {
+            "ver": "2.0.3a",
+            "text": [
+                "Aktualizacja package.json."
+            ],
+            "date": 1665743679
+        },
+        {
             "ver": "2.0.3",
             "text": [
                 "Dodano nazwy i opisy komend bazujące na lokalizacji (changelog, help, ping).",
