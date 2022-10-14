@@ -40,6 +40,7 @@
             "infoDetailedDesc": "Returns bot latency in milliseconds."
         },
         "bot": {
+            "id": 1030548816342040628,
             "title": "Informations about Simply",
             "descID": "ID:",
             "descAuthor": "Author:",
@@ -179,6 +180,15 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.4",
+            "text": [
+                "Creation of bot command.",
+                "Update of changelog command.",
+                "Checking the permission power when executing the command."
+            ],
+            "date": 1665772959
+        },
         {
             "ver": "2.0.3a",
             "text": [

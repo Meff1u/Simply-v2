@@ -20,7 +20,7 @@ module.exports = {
     ephemeral: false,
     category: 'info',
     permPower: 0,
-    logable: true,
+    logable: false,
     async execute(interaction, lang) {
         const ver = interaction.options.getString('version');
         if (!ver) {

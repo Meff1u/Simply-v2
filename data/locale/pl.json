@@ -40,6 +40,7 @@
             "infoDetailedDesc": "Zwraca opóźnienie bota w milisekundach."
         },
         "bot": {
+            "id": 1030548816342040628,
             "title": "Informacje o Simply",
             "descID": "ID:",
             "descAuthor": "Autor:",
@@ -178,6 +179,15 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.4",
+            "text": [
+                "Utworzenie komendy bot.",
+                "Aktualizacja komendy changelog.",
+                "Sprawdzanie mocy permisji podczas wywoływania komendy."
+            ],
+            "date": 1665772959
+        },
         {
             "ver": "2.0.3a",
             "text": [
