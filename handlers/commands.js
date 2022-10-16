@@ -3,7 +3,7 @@ const { REST, Routes } = require('discord.js');
 const fs = require('fs');
 const chalk = require('chalk');
 const ascii = require('ascii-table');
-const table = new ascii().setHeading('Commands', 'Status').setBorder('|', '=', '0', '0');
+const table = new ascii().setHeading('Commands', 'Type', 'Status').setBorder('|', '=', '0', '0');
 
 const rest = new REST({ version: '9' }).setToken(process.env.TOKEN);
 
@@ -19,11 +19,11 @@ module.exports = (client) => {
 
             if (command.data.name) {
                 client.commands.set(command.data.name, command);
-                table.addRow(file.split('.js')[0], '✅');
+                table.addRow(file.split('.js')[0], dir, '✅');
             }
             else {
                 console.log(command);
-                table.addRow(file.split('.js')[0], '⛔');
+                table.addRow(file.split('.js')[0], dir, '⛔');
             }
         }
     });

@@ -26,15 +26,20 @@ module.exports = {
         const { commands } = interaction.client;
         if (!command) {
             let infocmds = '';
+            let moderationcmds = '';
             commands.forEach(cmd => {
                 if (cmd.category === 'info') {
                     infocmds += `, </${cmd.data.name}:${lang.commands[cmd.data.name].id}>`;
+                }
+                else if (cmd.category === 'moderation') {
+                    moderationcmds += `, </${cmd.data.name}:${lang.commands[cmd.data.name].id}>`;
                 }
             });
             const embed = new EmbedBuilder()
             .setTitle(lang.commands.help.helpTitle)
             .addFields(
                 { name: lang.commands.help.helpFieldInfo, value: infocmds.slice(2) },
+                { name: lang.commands.help.helpFieldMod, value: moderationcmds.slice(2) },
             )
             .setColor('#69BB57')
             .setFooter({ iconURL: interaction.client.user.displayAvatarURL(), text: lang.commands.help.helpFooter });
@@ -43,11 +48,11 @@ module.exports = {
             .addComponents(
                 new ButtonBuilder()
                 .setURL('https://github.com/Mefuuu/Simply-v2/issues')
-                .setLabel('Report a bug!')
+                .setLabel(lang.commands.help.reportButton)
                 .setStyle(ButtonStyle.Link)
                 .setEmoji('🐛'),
                 new ButtonBuilder()
-                .setLabel('Support Server')
+                .setLabel(lang.commands.help.supportButton)
                 .setStyle(ButtonStyle.Link)
                 .setURL('https://discord.gg/fMUmHvQV43'),
             );

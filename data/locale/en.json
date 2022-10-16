@@ -6,6 +6,8 @@
             "helpFieldInfo": "Info commands:",
             "helpFieldMod": "Moderation commands:",
             "helpFooter": "Use /help (command name) for more info!",
+            "reportButton": "Report a bug!",
+            "supportButton": "Support Server",
             "commandNotExists": "This command does not exists!",
             "infoCommandTitle": "Command:",
             "infoUsageBar": "Usage:",
@@ -62,6 +64,7 @@
             "infoDeetailedDesc": "Displays detailed bot information such as statistics, host, versions, etc."
         },
         "settings": {
+            "id": 1031161983275384852,
             "permsNoData": "No data.",
             "permsTitle": "Custom permissions power for:",
             "permsFieldCommands": "Commands:",
@@ -180,6 +183,17 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.5",
+            "text": [
+                "Fix and update for help command.",
+                "Rewrite of settings command.",
+                "Fix checking permission power when executing a command.",
+                "Command handler update.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1665923026
+        },
         {
             "ver": "2.0.4",
             "text": [

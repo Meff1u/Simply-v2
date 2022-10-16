@@ -6,6 +6,8 @@
             "helpFieldInfo": "Komendy informacyjne:",
             "helpFieldMod": "Komendy moderacyjne:",
             "helpFooter": "Użyj /help (nazwa komendy) po więcej informacji!",
+            "reportButton": "Zgłoś błąd!",
+            "supportButton": "Serwer pomocy",
             "commandNotExists": "Taka komenda nie istnieje!",
             "infoCommandTitle": "Komenda:",
             "infoUsageBar": "Użycie:",
@@ -62,6 +64,7 @@
             "infoDetailedDesc": "Wyświetla szczegółowe informacje o bocie takie jak statystyki, host, wersje, itp."
         },
         "settings": {
+            "id": 1031161983275384852,
             "permsNoData": "Brak danych.",
             "permsTitle": "Własna moc permisji dla:",
             "permsFieldCommands": "Komendy:",
@@ -179,6 +182,17 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.5",
+            "text": [
+                "Fix i aktualizacja komendy help.",
+                "Przepisanie komendy settings.",
+                "Fix sprawdzania mocy permisji podczas wykonywania komendy.",
+                "Aktualizacja handlera komend.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 
+        },
         {
             "ver": "2.0.4",
             "text": [

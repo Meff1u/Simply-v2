@@ -15,15 +15,11 @@ client.on('interactionCreate', async interaction => {
             await interaction.deferReply();
         }
 
-        let guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
+        const guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
         const lang = require(`../../data/locale/${guildcfg.lang}.json`);
 
-        if (!guildcfg.members || !guildcfg.members[interaction.member.id]) {
-            guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.members, [`members.${interaction.member.id}`]: { permPower: 0 } });
-        }
-
         const cmdpp = guildcfg.commands && guildcfg.commands[command.data.name] ? guildcfg.commands[command.data.name].permPower : command.permPower;
-        const memberpp = guildcfg.members && guildcfg.members[interaction.member.id] ? (interaction.member.permissions.has(PermissionsBitField.Flags.Administrator) ? 100 : guildcfg.members[interaction.member.id].permPower) : 0;
+        const memberpp = interaction.member.permissions.has(PermissionsBitField.Flags.Administrator) ? 100 : (guildcfg.members && guildcfg.members[interaction.member.id] && guildcfg.members[interaction.member.id].permPower ? guildcfg.members[interaction.member.id].permPower : 0);
 
         if (cmdpp > memberpp) {
             const embed = new EmbedBuilder()
