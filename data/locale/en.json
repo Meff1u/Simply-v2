@@ -66,10 +66,10 @@
         "settings": {
             "id": 1031161983275384852,
             "permsNoData": "No data.",
-            "permsTitle": "Custom permissions power for:",
+            "permsTitle": "Custom permission power for:",
             "permsFieldCommands": "Commands:",
             "permsFieldRoles": "Roles:",
-            "permsFieldUsers": "Users:",
+            "permsFieldUsers": "Members:",
             "verifyTitle": "Verification system settings for:",
             "verifyFieldEmbed": "Embed:",
             "verifyFieldEmbedTitle": "Title:",
@@ -87,19 +87,21 @@
             "infoDetailedDesc": "This command is a summary of all server settings.\nLists the permissions and system verification settings.\nYou can also change the bot language with this command."
         },
         "perms": {
-            "powerValue": "Permissions power value should be **an integer**, **greater than 0** and **less than 100**.",
-            "title": "Permissions power has been changed!",
+            "id": 1032343845519765524,
+            "powerValue": "Permission power value should be **an integer**, **greater than 0** and **less than 100**.",
+            "title": "Permission power has been changed!",
             "descCommand": "Command:",
             "descRole": "Role:",
-            "descUser": "User:",
+            "descUser": "Member:",
             "descPermPower": "Permission power:",
+            "descPermPowerDeleted": "Deleted",
             "footer": "Enter /settings permissions to see all permissions.",
             "infoUsage": [
                 "commands <command name> <value>",
                 "roles <role> <value>",
-                "users <user> <value>"
+                "members <member> <value>"
             ],
-            "infoDetailedDesc": "This command allows you to set the permissions power per command, role or user.\nEach configuration is server-based!\nThe minimum value of the permission power is **0** and the maximum is **100**\nUsers with the administrator permissions have a predetermined permissions power of 100, so you must have an administrator to configure commands for other users.\nHigher power = higher priority, i.e. a user with a power of 5 will not be able to use a command with a power of 10.\nAt the resultant power the greatest value is taken, i.e. a user with power 15 and role with power 10 will have a power of 15."
+            "infoDetailedDesc": "This command allows you to set the permissions power per command, role or member.\nEach configuration is server-based!\nThe minimum value of the permission power is **0** and the maximum is **100**.\nTo remove custom permission power, enter the **-1** value.\nMembers with the administrator permission have a predetermined permission power of 100, so you must have an administrator to configure commands for other members.\nHigher power = higher priority, i.e. a member with a power of 5 will not be able to use a command with a power of 10.\nAt the resultant power the greatest value is taken, i.e. a member with power 15 and role with power 10 will have a power of 15."
         },
         "verify": {
             "noText": "The verification channel must be a **text channel**!",
@@ -129,26 +131,26 @@
             "infoDetailedDesc": "This command allows you to create a verification system based on performing a math operation, assigns role(s) after successful verification.\nYou can also edit the already created verification system (text, channel, roles) or completely remove it."
         },
         "timeout": {
-            "permPower": "The user you want to timeout must not have a permissions power greater than or equal to you!",
+            "permPower": "The member you want to timeout must not have a permissions power greater than or equal to you!",
             "mentionedPermPower": "permissions power:",
             "yourPermPower": "Your permissions power:",
             "wrongTime": "Wrong time entered! Follow the pattern:\n\n5d 20h\n20m\n14d 5m",
             "error": "An unidentified error has occurred, please try again.",
             "timedOut": "has been timed out for",
             "infoUsage": [
-                "<user> <time> (reason)"
+                "<member> <time> (reason)"
             ],
-            "infoDetailedDesc": "This command allows you to prevent users from typing in a chat and talking on voice channels.\nEach such timeout is saved to the \"user punishments\" available under the /punishments command."
+            "infoDetailedDesc": "This command allows you to prevent members from typing in a chat and talking on voice channels.\nEach such timeout is saved to the \"member punishments\" available under the /punishments command."
         },
         "punishments": {
-            "noPunishments": "There are no punishments for this user!",
+            "noPunishments": "There are no punishments for this member!",
             "by": "by",
             "all": "all punishments:",
             "infoUsage": [
-                "<user> All",
-                "<user> Timeout"
+                "<member> All",
+                "<member> Timeout"
             ],
-            "infoDetailedDesc": "Displays all previous user punishments divided by categories (All, Timeout)."
+            "infoDetailedDesc": "Displays all previous member punishments divided by categories (All, Timeout)."
         }
     },
     "error": {
@@ -183,6 +185,15 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.6",
+            "text": [
+                "Rewrite of perms command (incomplete).",
+                "Fix for settings command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1666203902
+        },
         {
             "ver": "2.0.5",
             "text": [

@@ -46,19 +46,19 @@ module.exports = {
             let p1 = '';
             if (guildcfg.commands) {
                 for (const command in guildcfg.commands) {
-                    p1 += `> \`/${command}\` -> **${guildcfg.commands[command].permPower}**\n`;
+                    if (guildcfg.commands[command].permPower) p1 += `> \`/${command}\` -> **${guildcfg.commands[command].permPower}**\n`;
                 }
             }
             let p2 = '';
             if (guildcfg.roles) {
                 for (const role in guildcfg.roles) {
-                    p2 += `> <@&${role}> -> **${guildcfg.roles[role].permPower}**\n`;
+                    if (guildcfg.roles[role].permPower) p2 += `> <@&${role}> -> **${guildcfg.roles[role].permPower}**\n`;
                 }
             }
             let p3 = '';
             if (guildcfg.members) {
                 for (const member in guildcfg.members) {
-                    p3 += `> <@${member}> -> **${guildcfg.members[member].permPower}**\n`;
+                    if (guildcfg.members[member].permPower) p3 += `> <@${member}> -> **${guildcfg.members[member].permPower}**\n`;
                 }
             }
             if (p1 === '') p1 = `> ${lang.commands.settings.permsNoData}`;

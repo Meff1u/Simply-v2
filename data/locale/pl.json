@@ -87,19 +87,21 @@
             "infoDetailedDesc": "Ta komenda jest zestawieniem wszystkich ustawień serwerowych.\nWyświetla listę permisji i konfigurację systemu weryfikacji.\nZa pomocą tej komendy można również zmienić język bota."
         },
         "perms": {
+            "id": 1032343845519765524,
             "powerValue": "Moc permisji powinna być **liczbą całkowitą większą od 0** i **mniejszą od 100**.",
             "title": "Moc permisji została zmieniona!",
             "descCommand": "Komenda:",
             "descRole": "Rola:",
             "descUser": "Użytkownik:",
             "descPermPower": "Moc permisji:",
+            "descPermPowerDeleted": "Usunięta",
             "footer": "Wpisz /settings permissions aby zobaczyć wszystkie permisje.",
             "infoUsage": [
                 "commands <nazwa komendy> <wartość>",
                 "roles <rola> <wartość>",
                 "users <użytkownik> <wartość>"
             ],
-            "infoDetailedDesc": "Ta komenda pozwala ustawić moc permisji na komendy, role i użytkowników.\nKażda konfiguracja jest serwerowa!\nMinimalna wartość mocy permisji to **0**, a maksymalna **100**\nUżytkownicy z permisją administratora posiadają odgórnie ustaloną moc permisji na 100, więc aby skonfigurować komendy pod innych użytkowników należy mieć administratora.\nWiększa moc = większy priorytet, czyli użytkownik o mocy 5 **nie będzie mógł** użyć komendy o mocy 10.\nPrzy mocy wypadkowej brana jest największa wartość, to znaczy, że użytkownik o mocy 15 z rolą o mocy 10 będzie miał moc 15."
+            "infoDetailedDesc": "Ta komenda pozwala ustawić moc permisji na komendy, role i użytkowników.\nKażda konfiguracja jest serwerowa!\nMinimalna wartość mocy permisji to **0**, a maksymalna **100**.\nAby usunąć ustawioną niestandardową moc permisji należy wpisać wartość **-1**.\nUżytkownicy z permisją administratora posiadają odgórnie ustaloną moc permisji na 100, więc aby skonfigurować komendy pod innych użytkowników należy mieć administratora.\nWiększa moc = większy priorytet, czyli użytkownik o mocy 5 **nie będzie mógł** użyć komendy o mocy 10.\nPrzy mocy wypadkowej brana jest największa wartość, to znaczy, że użytkownik o mocy 15 z rolą o mocy 10 będzie miał moc 15."
         },
         "verify": {
             "noText": "Kanał weryfikacji musi być **kanałem tekstowym**!",
@@ -182,6 +184,15 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.6",
+            "text": [
+                "Przepisanie komendy perms (niedokończone)",
+                "Fix komendy settings.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1666203902
+        },
         {
             "ver": "2.0.5",
             "text": [
