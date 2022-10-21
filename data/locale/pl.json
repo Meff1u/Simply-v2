@@ -145,9 +145,12 @@
             "infoDetailedDesc": "Ta komenda pozwoli nieumożliwić użytkownikom pisanie na czacie i rozmawianie na kanałach głosowych.\nKażde takie \"wyciszenie\" jest zapisywane do \"kar użytkownika\" dostępnych pod komendom /punishments."
         },
         "punishments": {
+            "id": 1033133310441963561,
             "noPunishments": "Ten użytkownik nie ma żadnych kar!",
             "by": "od",
             "all": "- wszystkie kary:",
+            "type": "kary:",
+            "footer": "[ID] Typ kary - Powód (jak dawno)",
             "infoUsage": [
                 "<użytkownik> All",
                 "<użytkownik> Timeout"
@@ -186,6 +189,15 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.8",
+            "text": [
+                "Przepisanie komendy punishments.",
+                "Fix komendy timeout.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 
+        },
         {
             "ver": "2.0.7",
             "text": [

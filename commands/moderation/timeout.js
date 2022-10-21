@@ -68,7 +68,7 @@ module.exports = {
         }
 
         await interaction.followUp({ content: `${tomute} ${lang.commands.timeout.timedOut} ${ms(time, { long: true })}` });
-        guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.members[tomute.id].punishments, [`members.${tomute.id}.punishments`]: [{ type: 'Timeout', reason: reason, time: Date.now(), by: `${interaction.member.id}` }] });
+        guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { $push: { [`members.${tomute.id}.punishments`]: { type: 'Timeout', reason: reason, time: Date.now(), by: `${interaction.member.id}` } } });
     },
 };
 

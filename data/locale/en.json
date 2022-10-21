@@ -145,9 +145,12 @@
             "infoDetailedDesc": "This command allows you to prevent members from typing in a chat and talking on voice channels.\nEach such timeout is saved to the \"member punishments\" available under the /punishments command."
         },
         "punishments": {
+            "id": 1033133310441963561,
             "noPunishments": "There are no punishments for this member!",
             "by": "by",
             "all": "all punishments:",
+            "type": "punishments:",
+            "footer": "[ID] Punishment type - Reason (time ago)",
             "infoUsage": [
                 "<member> All",
                 "<member> Timeout"
@@ -187,6 +190,15 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.8",
+            "text": [
+                "Rewrite of punishments command.",
+                "Fix for timeout command.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1666390555
+        },
         {
             "ver": "2.0.7",
             "text": [

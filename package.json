@@ -1,6 +1,6 @@
 {
   "name": "simply-v2",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Continuation of Simply bot and rebuild for d.js v14",
   "main": "bot.js",
   "scripts": {
