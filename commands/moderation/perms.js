@@ -73,33 +73,62 @@ module.exports = {
     permPower: 10,
     logable: true,
     async execute(interaction, lang, guildcfg) {
+        const permPower = interaction.options.getInteger('value');
+        if (permPower < -1 || permPower > 100 || Math.round(permPower) !== permPower) return await interaction.followUp({ content: lang.commands.perms.powerValue });
+
         if (interaction.options.getSubcommand() === 'commands') {
             const cmd = interaction.options.getString('command');
             const { commands } = interaction.client;
             const findedcmd = commands.get(cmd);
             if (!findedcmd) return await interaction.followUp({ content: lang.commands.help.commandNotExists });
 
-            const permPower = interaction.options.getInteger('value');
-            if (permPower < -1 || permPower > 100 || Math.round(permPower) !== permPower) return await interaction.followUp({ content: lang.commands.perms.powerValue });
-
-            if (permPower !== -1) {
-                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.commands, [`commands.${cmd}`]: { permPower: permPower } });
-                const embed = new EmbedBuilder()
-                .setTitle(lang.commands.perms.title)
-                .setDescription(`> • ${lang.commands.perms.descCommand} **${cmd}**\n> • ${lang.commands.perms.descPermPower} **${permPower}**`)
-                .setColor('#69BB57')
-                .setFooter({ text: lang.commands.perms.footer });
-                await interaction.followUp({ embeds: [embed] });
+            const embed = new EmbedBuilder()
+            .setTitle(lang.commands.perms.title)
+            .setColor('#69BB57')
+            .setFooter({ text: lang.commands.perms.footer });
+            if (permPower === -1) {
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { $unset: { [`commands.${cmd}.permPower`]: '' } });
+                embed.setDescription(`> • ${lang.commands.perms.descCommand} **${cmd}**\n> • ${lang.commands.perms.descPermPower} **${lang.commands.perms.descPermPowerDeleted}**`);
             }
             else {
-                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { $unset: { [`commands.${cmd}.permPower`]: '' } });
-                const embed = new EmbedBuilder()
-                .setTitle(lang.commands.perms.title)
-                .setDescription(`> • ${lang.commands.perms.descCommand} **${cmd}**\n> • ${lang.commands.perms.descPermPower} **${lang.commands.perms.descPermPowerDeleted}**`)
-                .setColor('#69BB57')
-                .setFooter({ text: lang.commands.perms.footer });
-                await interaction.followUp({ embeds: [embed] });
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.commands, [`commands.${cmd}`]: { permPower: permPower } });
+                embed.setDescription(`> • ${lang.commands.perms.descCommand} **${cmd}**\n> • ${lang.commands.perms.descPermPower} **${permPower}**`);
             }
+            await interaction.followUp({ embeds: [embed] });
+        }
+        else if (interaction.options.getSubcommand() === 'roles') {
+            const role = interaction.options.getRole('role');
+
+            const embed = new EmbedBuilder()
+            .setTitle(lang.commands.perms.title)
+            .setColor('#69BB57')
+            .setFooter({ text: lang.commands.perms.footer });
+            if (permPower === -1) {
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { $unset: { [`roles.${role.id}.permPower`]: '' } });
+                embed.setDescription(`> • ${lang.commands.perms.descRole} **${role}**\n> • ${lang.commands.perms.descPermPower} **${lang.commands.perms.descPermPowerDeleted}**`);
+            }
+            else {
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.roles, [`roles.${role.id}`]: { permPower: permPower } });
+                embed.setDescription(`> • ${lang.commands.perms.descRole} **${role}**\n> • ${lang.commands.perms.descPermPower} **${permPower}**`);
+            }
+            await interaction.followUp({ embeds: [embed] });
+        }
+        else if (interaction.options.getSubcommand() === 'members') {
+            const user = interaction.options.getUser('member');
+
+            const embed = new EmbedBuilder()
+            .setTitle(lang.commands.perms.title)
+            .setColor('#69BB57')
+            .setFooter({ text: lang.commands.perms.footer });
+            if (permPower === -1) {
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { $unset: { [`members.${user.id}.permPower`]: '' } });
+                embed.setDescription(`> • ${lang.commands.perms.descUser} **${user}**\n> • ${lang.commands.perms.descPermPower} **${lang.commands.perms.descPermPowerDeleted}**`);
+            }
+            else {
+                guildcfg = await guildcfgs.updateOne({ gid: interaction.guild.id }, { ...guildcfg.members, [`members.${user.id}`]: { permPower: permPower } });
+                embed.setDescription(`> • ${lang.commands.perms.descUser} **${user}**\n> • ${lang.commands.perms.descPermPower} **${permPower}**`);
+            }
+            await interaction.followUp({ embeds: [embed] });
         }
     },
 };

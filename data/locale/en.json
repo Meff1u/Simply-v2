@@ -131,10 +131,12 @@
             "infoDetailedDesc": "This command allows you to create a verification system based on performing a math operation, assigns role(s) after successful verification.\nYou can also edit the already created verification system (text, channel, roles) or completely remove it."
         },
         "timeout": {
-            "permPower": "The member you want to timeout must not have a permissions power greater than or equal to you!",
-            "mentionedPermPower": "permissions power:",
-            "yourPermPower": "Your permissions power:",
+            "id": 1033050604454555778,
+            "permPower": "The member you want to timeout must not have a permission power greater than or equal to you!",
+            "mentionedPermPower": "permission power:",
+            "yourPermPower": "Your permission power:",
             "wrongTime": "Wrong time entered! Follow the pattern:\n\n5d 20h\n20m\n14d 5m",
+            "invalidTime": "It looks like the entered time is invalid and Discord's API returns an error. Please try again or enter a lower time.\n\nError:",
             "error": "An unidentified error has occurred, please try again.",
             "timedOut": "has been timed out for",
             "infoUsage": [
@@ -158,7 +160,7 @@
         "permPowerRequired": "Required permission power:",
         "permPowerYour": "Your permission power:",
         "initError": "There was an error, please contact the developer with the error ID:",
-        "noReason": "No reason provided!"
+        "noReason": "No reason provided."
     },
     "langChange": "Successfully changed language to English! 🇬🇧",
     "verify": {
@@ -185,6 +187,17 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.7",
+            "text": [
+                "Update of help command.",
+                "Update and fix of perms command.",
+                "Creation of timeout command.",
+                "Update of command initialization.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1666375422
+        },
         {
             "ver": "2.0.6",
             "text": [

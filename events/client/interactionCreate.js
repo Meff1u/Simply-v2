@@ -18,8 +18,20 @@ client.on('interactionCreate', async interaction => {
         const guildcfg = await guildcfgs.findOne({ gid: interaction.guild.id });
         const lang = require(`../../data/locale/${guildcfg.lang}.json`);
 
-        const cmdpp = guildcfg.commands && guildcfg.commands[command.data.name] ? guildcfg.commands[command.data.name].permPower : command.permPower;
-        const memberpp = interaction.member.permissions.has(PermissionsBitField.Flags.Administrator) ? 100 : (guildcfg.members && guildcfg.members[interaction.member.id] && guildcfg.members[interaction.member.id].permPower ? guildcfg.members[interaction.member.id].permPower : 0);
+        const cmdpp = guildcfg.commands[command.data.name]?.permPower ? guildcfg.commands[command.data.name].permPower : command.permPower;
+        let memberpp = interaction.member.permissions.has(PermissionsBitField.Flags.Administrator) ? 100 : (guildcfg.members && guildcfg.members[interaction.member.id] && guildcfg.members[interaction.member.id].permPower ? guildcfg.members[interaction.member.id].permPower : 0);
+
+        if (guildcfg.roles) {
+            for (const role in guildcfg.roles) {
+                if (guildcfg.roles[role].permPower) {
+                    if (interaction.member.roles.cache.has(role)) {
+                        if (guildcfg.roles[role].permPower > memberpp) {
+                            memberpp = guildcfg.roles[role].permPower;
+                        }
+                    }
+                }
+            }
+        }
 
         if (cmdpp > memberpp) {
             const embed = new EmbedBuilder()

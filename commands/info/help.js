@@ -65,7 +65,7 @@ module.exports = {
                 return await interaction.followUp({ content: lang.commands.help.commandNotExists });
             }
             let serverperm = '';
-            if (guildcfg.commands && guildcfg.commands[findedcmd.data.name]) {
+            if (guildcfg.commands[findedcmd.data.name]?.permPower) {
                 serverperm += `\n${lang.commands.help.infoPermissionBarServer} \`${guildcfg.commands[findedcmd.data.name].permPower}\``;
             }
             let usage = '';

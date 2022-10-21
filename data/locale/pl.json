@@ -131,10 +131,12 @@
             "infoDetailedDesc": "Ta komenda pozwala utworzyć system weryfikacji polegający na wykonaniu działania matematycznego, po udanej weryfikacji nadaje role.\nSłuży również do edycji utworzonego już systemu weryfikacji (tekst, kanał, role) lub do jego całkowitego usunięcia."
         },
         "timeout": {
+            "id": 1033050604454555778,
             "permPower": "Użytkownik, którego chcesz wysłać na przerwę nie może mieć od ciebie większej lub równej mocy permisji!",
             "mentionedPermPower": "- moc permisji:",
             "yourPermPower": "Twoja moc permisji:",
             "wrongTime": "Wpisano zły czas! Zastosuj się do wzoru:\n\n5d 20h\n20m\n14d 5m",
+            "invalidTime": "Wygląda na to, że wprowadzony czas jest nieprawidłowy i API Discorda zwraca błąd. Spróbuj ponownie lub wprowadź mniejszy czas.\n\nBłąd:",
             "error": "Wystąpił niezidentyfikowany błąd, spróbuj ponownie.",
             "timedOut": "został wysłany na przerwę na:",
             "infoUsage": [
@@ -158,7 +160,7 @@
         "permPowerRequired": "Wymagana moc permisji:",
         "permPowerYour": "Twoja moc permisji:",
         "initError": "Wystąpił błąd, proszę skontaktować się z deweloperem podając ID błędu:",
-        "noReason": "Nie wprowadzono powodu!"
+        "noReason": "Nie podano powodu."
     },
     "langChange": "Pomyślnie zmieniono język na Polski! 🇵🇱",
     "verify": {
@@ -184,6 +186,17 @@
         "roleAddition": "Dodawanie ról ukończone:"
     },
     "changelog": [
+        {
+            "ver": "2.0.7",
+            "text": [
+                "Akutalizacja komendy help.",
+                "Aktualizacja i fix komendy perms.",
+                "Utowrzenie komendy timeout.",
+                "Aktualizacja inicjalizacji komend.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1666375422
+        },
         {
             "ver": "2.0.6",
             "text": [
