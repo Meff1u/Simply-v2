@@ -71,9 +71,10 @@
             "permsFieldRoles": "Role:",
             "permsFieldUsers": "Użytkownicy:",
             "verifyTitle": "Konfiguracja systemu weryfikacji dla:",
-            "verifyFieldEmbed": "Embed:",
+            "verifyFieldEmbed": "Tekst:",
             "verifyFieldEmbedTitle": "Tytuł:",
             "verifyFieldEmbedDesc": "Opis:",
+            "verifyFieldEmbedButton": "Przycisk:",
             "verifyFieldRoles": "Role:",
             "verifyFieldLocation": "Lokacja:",
             "verifyFieldMessage": "Wiadomość",
@@ -104,7 +105,8 @@
             "infoDetailedDesc": "Ta komenda pozwala ustawić moc permisji na komendy, role i użytkowników.\nKażda konfiguracja jest serwerowa!\nMinimalna wartość mocy permisji to **0**, a maksymalna **100**.\nAby usunąć ustawioną niestandardową moc permisji należy wpisać wartość **-1**.\nUżytkownicy z permisją administratora posiadają odgórnie ustaloną moc permisji na 100, więc aby skonfigurować komendy pod innych użytkowników należy mieć administratora.\nWiększa moc = większy priorytet, czyli użytkownik o mocy 5 **nie będzie mógł** użyć komendy o mocy 10.\nPrzy mocy wypadkowej brana jest największa wartość, to znaczy, że użytkownik o mocy 15 z rolą o mocy 10 będzie miał moc 15."
         },
         "verify": {
-            "noText": "Kanał weryfikacji musi być **kanałem tekstowym**!",
+            "id": 1033317459601657876,
+            "alreadyExists": "System weryfikacji jest już utworzony! (/settings verify)",
             "noPerms": "Nie mam permisji, aby wysyłać wiadomości na tym kanale! (`WYSYŁANIE WIADOMOŚCI`)",
             "noHigher": "Rola weryfikacji nie może być wyżej niż moja rola!",
             "noBotRole": "Rola weryfikacji nie może być rolą bota!",
@@ -190,13 +192,23 @@
     },
     "changelog": [
         {
+            "ver": "2.0.9",
+            "text": [
+                "Aktualizacja komendy settings, możliwość sprawdzenia konfiguracji systemu weryfikacji.",
+                "Przepisanie komendy verify (niedokończone, aktualnie można tylko tworzyć system weryfikacji).",
+                "Aktualizacja schematu serwerów w MongoDB.",
+                "Aktualizacja językowa (Polski i Angielski)."
+            ],
+            "date": 1666434146
+        },
+        {
             "ver": "2.0.8",
             "text": [
                 "Przepisanie komendy punishments.",
                 "Fix komendy timeout.",
                 "Aktualizacja językowa (Polski i Angielski)."
             ],
-            "date": 
+            "date": 1666390555
         },
         {
             "ver": "2.0.7",

@@ -1,7 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField } = require('discord.js');
 const guildcfgs = require('../../schemas/guildcfg');
 const ms = require('ms');
-const { user } = require('../../bot');
 
 module.exports = {
     data: new SlashCommandBuilder()

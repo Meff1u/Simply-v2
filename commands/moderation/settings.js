@@ -85,8 +85,25 @@ module.exports = {
             await interaction.followUp({ embeds: [embed] });
         }
         else if (interaction.options.getSubcommand() === 'verify') {
-            if (guildcfg.verify) {
-                await interaction.followUp({ content: 'Soon...' });
+            if (guildcfg.verify?.enabled) {
+                const ch = await interaction.client.channels.cache.get(guildcfg.verify.channelId);
+                const msg = await ch.messages.fetch(guildcfg.verify.messageId);
+                let roles = '';
+                for (let i = 0; i < guildcfg.verify.roles.length; i++) {
+                    roles += `> • <@&${guildcfg.verify.roles[i]}>\n`;
+                }
+
+                const embed = new EmbedBuilder()
+                .setTitle(`${lang.commands.settings.verifyTitle} ${interaction.guild.name}`)
+                .setColor('#69BB57')
+                .setFields(
+                    { name: lang.commands.settings.verifyFieldEmbed, value: `> • ${lang.commands.settings.verifyFieldEmbedTitle}\n\`\`\`${msg.embeds[0].title}\`\`\`\n> • ${lang.commands.settings.verifyFieldEmbedDesc}\n\`\`\`${msg.embeds[0].description}\`\`\`\n> • ${lang.commands.settings.verifyFieldEmbedButton}\n\`\`\`${msg.components[0].components[0].data.label}\`\`\``, inline: true },
+                    { name: '\u200B', value: '\u200B', inline: false },
+                    { name: lang.commands.settings.verifyFieldRoles, value: roles, inline: true },
+                    { name: lang.commands.settings.verifyFieldLocation, value: `> • ${ch} ([${lang.commands.settings.verifyFieldMessage}](${msg.url}))`, inline: true },
+                )
+                .setFooter({ text: lang.commands.settings.verifyFooter });
+                await interaction.followUp({ embeds: [embed] });
             }
             else {
                 await interaction.followUp({ content: lang.commands.settings.noVerify });

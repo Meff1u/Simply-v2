@@ -3,6 +3,9 @@ const gSchema = new Schema({
     _id: Schema.Types.ObjectId,
     gid: { type: String, required: true },
     lang: { type: String, required: true },
+    verify: {
+        type: Schema.Types.Mixed,
+    },
     members: {
         type: Schema.Types.Mixed,
     },

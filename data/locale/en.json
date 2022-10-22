@@ -71,9 +71,10 @@
             "permsFieldRoles": "Roles:",
             "permsFieldUsers": "Members:",
             "verifyTitle": "Verification system settings for:",
-            "verifyFieldEmbed": "Embed:",
+            "verifyFieldEmbed": "Text:",
             "verifyFieldEmbedTitle": "Title:",
-            "verifyFieldEmbedDesc": "Description",
+            "verifyFieldEmbedDesc": "Description:",
+            "verifyFieldEmbedButton": "Button:",
             "verifyFieldRoles": "Roles:",
             "verifyFieldLocation": "Location:",
             "verifyFieldMessage": "Message",
@@ -104,7 +105,8 @@
             "infoDetailedDesc": "This command allows you to set the permissions power per command, role or member.\nEach configuration is server-based!\nThe minimum value of the permission power is **0** and the maximum is **100**.\nTo remove custom permission power, enter the **-1** value.\nMembers with the administrator permission have a predetermined permission power of 100, so you must have an administrator to configure commands for other members.\nHigher power = higher priority, i.e. a member with a power of 5 will not be able to use a command with a power of 10.\nAt the resultant power the greatest value is taken, i.e. a member with power 15 and role with power 10 will have a power of 15."
         },
         "verify": {
-            "noText": "The verification channel must be a **text channel**!",
+            "id": 1033317459601657876,
+            "alreadyExists": "Verification system has been already created! (/settings verify)",
             "noPerms": "I don't have permissions to send messages on this channel! (`SEND MESSAGES`)",
             "noHigher": "The verification role can't be higher than my role!",
             "noBotRole": "The verification role can't be a bot role!",
@@ -190,6 +192,16 @@
         "roleAddition": "The role addition is complete:"
     }, 
     "changelog": [
+        {
+            "ver": "2.0.9",
+            "text": [
+                "Update of settings command, possibility to see new verification system settings.",
+                "Rewrite of verify command (incomplete, currently you can only create a verification system).",
+                "Update of MongoDB guild schema.",
+                "Language update (Polish and English)."
+            ],
+            "date": 1666434146
+        },
         {
             "ver": "2.0.8",
             "text": [
